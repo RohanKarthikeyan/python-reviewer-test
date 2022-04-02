@@ -35,7 +35,7 @@ def kickoff_subprocess(cmd, log_file_name):
     #Windows
     process = subprocess.call(['cmd', '/c'], shell=False)
 
-    file = open(log_file_name, "a+")
+    #file = open(log_file_name, "a+")
     timestamp = datetime.datetime.now(datetime.timezone.utc).strftime("%m/%d/%Y, %H:%M:%S")
     output = timestamp + " Command: "+ cmd[0] + " | Return Code: " + str(process) + "\n"
     # context manager https://book.pythontips.com/en/latest/context_managers.html
